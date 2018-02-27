@@ -4,10 +4,9 @@ var fs = require('fs');
 var path = require('path');
 var webpack = require('webpack');
 var findUp = require('find-up');
+var UglifyPlugin = require('uglifyjs-webpack-plugin');
 
 var hopsConfig = require('hops-config');
-
-var checkEsnext = require('../lib/check-esnext');
 
 function findNodeModules(start) {
   var modulesDir = findUp.sync('node_modules', { cwd: start });
@@ -22,13 +21,7 @@ function findNodeModules(start) {
 }
 
 function shouldIncludeExternalModuleInBundle(module) {
-  return (
-    module.indexOf('hops') === 0 ||
-    module.indexOf('core-js') === 0 ||
-    module.indexOf('babel-polyfill') === 0 ||
-    !/\.(?:js|json|mjs|node)$/.test(require.resolve(module)) ||
-    checkEsnext(module)
-  );
+  return true;
 }
 
 var modulesDir = findNodeModules(process.cwd());
@@ -70,6 +63,14 @@ module.exports = {
         hopsConfig.envVars
       )
     ),
+    new webpack.HashedModuleIdsPlugin(),
+    new webpack.LoaderOptionsPlugin({
+      debug: false,
+      minimize: true,
+      sourceMap: true,
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new UglifyPlugin({ sourceMap: true, cache: true, parallel: true }),
   ],
   performance: {
     hints: false,

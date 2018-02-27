@@ -23,7 +23,7 @@ function omitSubPaths(_path, i, paths) {
 
 function getProductionDependencies(manifest) {
   return new Promise(function(resolve, reject) {
-    resolveTree.manifest(manifest, function(error, tree) {
+    resolveTree.packages(manifest, function(error, tree) {
       if (error) {
         return reject(error);
       }
@@ -60,9 +60,10 @@ module.exports = function createLambdaBundle(
       archive.on('progress', onProgress);
     }
 
-    var productionDependencies = getProductionDependencies(
-      require(path.join(rootDir, 'package.json'))
-    );
+    var productionDependencies = getProductionDependencies([
+      'hops-lambda',
+      'hops-express',
+    ]);
 
     output.on('open', function() {
       archive.pipe(output);
