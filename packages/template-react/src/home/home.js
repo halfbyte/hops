@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Helmet>
-        <title>Hops Demo</title>
+        <title>Hops Demo 2</title>
       </Helmet>
       <h1 className={styles.headline}>Hello World!</h1>
     </div>

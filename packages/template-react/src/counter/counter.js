@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default function Counter({ count, increment, decrement }) {
   return (
     <div>
-      <span>Clicked: {count} times</span>
+      <span>count: {count}</span>
       <div>
         <button onClick={increment.bind(null, 1)}>+</button>
       </div>

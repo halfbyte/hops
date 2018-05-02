@@ -1,32 +1,28 @@
 {
-  "name": "hops-redux",
-  "version": "10.4.3",
-  "description": "React and Redux implementation for Hops",
+  "name": "@untool/redux",
+  "version": "1.0.0",
+  "description": "untool redux mixin",
   "keywords": [
-    "hops",
-    "react",
-    "redux"
-  ],
-  "license": "MIT",
-  "engines": {
-    "node": ">=8.10.0"
-  },
-  "main": "index.js",
-  "files": [
-    "index.js"
+    "unmixin"
   ],
   "scripts": {
-    "test": "jest"
-  },
-  "jest": {
-    "testEnvironment": "node"
+    "test": "echo \"Error: no test specified\""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xing/hops.git"
+    "url": "git+ssh://git@github.com/hops/hops.git"
   },
+  "author": "XING SE",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/hops/hops/issues"
+  },
+  "homepage": "https://github.com/hops/hops#readme",
   "dependencies": {
-    "hops-react": "10.4.3"
+    "@untool/core": "^0.4.3"
   },
   "peerDependencies": {
     "react": ">=15.0.0 <17.0.0",
@@ -35,7 +31,6 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
-    "jest": "^22.0.4",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-helmet": "^5.2.0",
@@ -44,5 +39,8 @@
     "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
     "redux-thunk": "^2.2.0"
+  },
+  "engines": {
+    "node": ">8.6.0"
   }
 }
