@@ -13,10 +13,6 @@
   },
   "dependencies": {
     "hops": "10.4.0",
-    "hops-config": "10.4.0",
-    "hops-express": "10.4.2"
-  },
-  "devDependencies": {
-    "hops-build": "10.4.4"
+    "hops-config": "10.4.0"
   }
 }
