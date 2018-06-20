@@ -102,7 +102,9 @@
     "packages/*"
   ],
   "jest": {
-    "projects": ["packages/*"]
+    "projects": [
+      "packages/*"
+    ]
   },
   "devDependencies": {
     "cz-conventional-changelog": "^2.1.0",
@@ -117,7 +119,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "husky": "^0.14.3",
     "lerna": "^2.5.1",
-    "lint-staged": "^7.0.0",
+    "lint-staged": "^7.2.0",
     "prettier": "^1.12.0"
   }
 }
