@@ -102,7 +102,9 @@
     "packages/*"
   ],
   "jest": {
-    "projects": ["packages/*"]
+    "projects": [
+      "packages/*"
+    ]
   },
   "devDependencies": {
     "cz-conventional-changelog": "^2.1.0",
@@ -110,7 +112,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-semistandard": "^12.0.0",
     "eslint-config-standard": "^11.0.0-beta.0",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^6.0.0",
     "eslint-plugin-prettier": "^2.4.0",
     "eslint-plugin-promise": "^3.5.0",
