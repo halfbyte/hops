@@ -39,7 +39,7 @@
     "filesize": "^3.5.11",
     "hops-build-config": "10.4.4",
     "hops-config": "10.4.0",
-    "hops-express": "10.4.2",
+    "hops-express": "10.4.6",
     "memory-fs": "^0.4.1",
     "mkdirp": "^0.5.1",
     "node-mocks-http": "^1.6.7",
